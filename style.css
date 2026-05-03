@@ -116,7 +116,6 @@ nav a:hover {
 }
 
 
-
 #content {
     display:flex;
     gap: 5%;
@@ -130,12 +129,12 @@ nav a:hover {
 }
 
 #content figure {
-    max-width: 35%;
+    max-width: 50%;
     margin-left: 40px;
 }
 
 #content figure img {
-    width: 150%;
+    width: 100%;
     display: block;
 }
 
