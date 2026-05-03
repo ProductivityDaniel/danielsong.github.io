@@ -1,0 +1,33 @@
+/*
+Daniel Song
+Stylesheet for about me page
+*/
+
+
+#content {
+    display:flex;
+    gap: 5%;
+    align-items:center;
+    max-width: 800px;
+
+}
+
+#content p {
+    max-width: 50%
+}
+
+#content figure {
+    max-width: 50%;
+    margin-left: 40px;
+}
+
+#content figure img {
+    width: 100%;
+    display: block;
+}
+
+figcaption {
+    font-size: 0.75rem;
+    color: var(--text2);
+    margin-top: 6px;
+}

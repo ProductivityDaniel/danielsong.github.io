@@ -1,0 +1,115 @@
+/*
+    Daniel Song
+    stylesheet for contact page
+*/ 
+
+#content {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.scene {
+    perspective: 500px; 
+    width: 400px;
+    height: 220px;
+    
+}
+
+.card {
+
+    margin: 0px;
+    padding: 0px;
+    width: 400px;
+    height: 220px; 
+    transform-style: preserve-3d; 
+    position: relative; 
+    transition: transform 0.75s ease; 
+}
+
+.scene:hover .card {
+    transform: rotateY(-180deg);
+}
+
+.front {
+    border-radius: 7px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+    position: absolute;
+    background-color: #f7f4ef;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden
+}
+
+
+.back {
+    border-radius: 7px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+    position:absolute; 
+    background-color: #f7f4ef; 
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    transform: rotateY(180deg);
+
+}
+
+.front, .back {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 2rem;
+}
+
+.front #name {
+    font-size: 1.3rem; 
+
+
+}
+
+figcaption {
+    font-size: 0.75rem;
+    color: var(--text2);
+    margin-top: 6px;
+}
+
+#subtitle {
+    margin-top: 1%;
+    color: var(--text2);
+
+}
+
+hr {
+    margin-top: 1%;
+    border: none;
+    border-top: 0.5px solid var(--text1)
+}
+
+.row {
+    display: flex;
+}
+
+
+.label {
+    min-width: 100px;
+    color: var(--text2); 
+}
+
+#city {
+    margin-top: auto;
+    font-size: 0.75rem; 
+    color: var(--text2);
+}
+
+.raw {
+    display: inline-block;
+    font-size: inherit;
+    color: inherit;
+    text-decoration: none;
+    margin: 0;
+    transition: translate 0.4s ease; 
+}
+
+.raw:hover {
+    translate: 5px 0px; 
+}
