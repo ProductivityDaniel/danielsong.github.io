@@ -37,7 +37,6 @@ body {
 
     display: grid; 
     grid-template-columns: 1fr 1fr;
-    margin: var(--gallerygap);
     
 }
 #gallery img.single {
@@ -50,6 +49,7 @@ body {
     width: 100%; 
     object-fit: cover;
     grid-column: span 2; 
+    padding-top: 0;
     padding-bottom: var(--gallerygap)
 
 }
