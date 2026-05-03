@@ -15,14 +15,14 @@
     --bgcolor: white; /* change these to change general style */ 
     --text1: rgb(75, 75, 75);
     --text2: rgb(150, 150, 150); 
-    --gallerygap: 16px; 
+    --gallerygap: 3px; 
 
     
 }
 
 body {
     background-color: var(--bgcolor);
-    font-family: Arial, Helvetica, sans-serif; 
+    font-family: 'Spectral', serif; 
 
 
 
@@ -58,30 +58,41 @@ body {
     position: sticky;
     top: 0;
     align-self: flex-start;
-    width: 25%;
+    width: 35%;
     min-width: 150px;
     height: 100vh;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    padding: 5%;
+    justify-content: center; /* change to flex-start for top */ 
+    padding: 2%;
+    
+}
+
+#sidebar nav {
+
+    padding-left: 0%; /* adjust this to toggle indentation with links */ 
 }
 
 #sidebar #logo {
 
     font-family: 'Spectral', serif; 
-    font-size: 1.3rem;
+    font-size: 2.0rem;
     white-space: nowrap;
+    margin-bottom: 15px; 
 
 }
 
 a {
-    display:inline-block; 
+    display: block; 
     text-decoration: none; 
     color: var(--text1); 
     transition: translate 0.4s ease; 
-    height: 35%; 
     font-size: 1.2em; 
+    margin-bottom: 2%
+}
+
+svg {
+    margin-top: 5%;
 
 }
 
@@ -91,3 +102,14 @@ nav a:hover {
 
 }
 
+#bottom {
+    position: fixed; 
+    bottom: 0; 
+    left: 0;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.304); 
+    backdrop-filter: blur(1px); 
+    padding: 0.5%; 
+    color: rgb(0, 0, 0);
+    font-size: 0.8rem;
+}
