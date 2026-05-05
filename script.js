@@ -25,15 +25,18 @@ document.querySelectorAll('[data-desc]').forEach(function(el) {
     });
 });
 
-/* paper clip moving */ 
+/* paper clip & pencil moving */ 
 const paperclip = document.getElementById('paperclip');
+const pencil = document.getElementById('pencil');
 
-if (scene && paperclip) {
+if (scene && paperclip && pencil) {
     scene.addEventListener('mouseenter', function() {
-        paperclip.style.transform = 'translateY(-75px) rotate(-80deg)';
+        paperclip.style.transform = 'translateY(-75px) rotate(80deg)';
+        pencil.style.transform = 'translateX(20px)'
     });
     scene.addEventListener('mouseleave', function() {
         paperclip.style.transform = 'translateY(0)';
+        pencil.style.transform = 'translateX(0px)'
     });
 }
 
