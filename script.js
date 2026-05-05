@@ -25,4 +25,16 @@ document.querySelectorAll('[data-desc]').forEach(function(el) {
     });
 });
 
+/* paper clip moving */ 
+const paperclip = document.getElementById('paperclip');
+
+if (scene && paperclip) {
+    scene.addEventListener('mouseenter', function() {
+        paperclip.style.transform = 'translateY(-75px) rotate(-80deg)';
+    });
+    scene.addEventListener('mouseleave', function() {
+        paperclip.style.transform = 'translateY(0)';
+    });
+}
+
 
