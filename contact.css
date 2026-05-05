@@ -8,12 +8,14 @@
     justify-content: center;
     align-items: center;
     height: 100vh;
+    margin-left: 20%; 
 }
 .scene {
     perspective: 500px; 
     width: 400px;
     height: 220px;
-    
+    transition: transform 0.4s ease; 
+    cursor: crosshair; 
 }
 
 .card {
@@ -27,15 +29,24 @@
     transition: transform 0.75s ease; 
 }
 
-.scene:hover .card {
-    transform: rotateY(-180deg);
+#card_img {
+    position: absolute;
+    bottom: 10px;
+    right: 25px;
+    max-width: 30%;
 }
+
+.scene:hover {
+    transform: scale(1.02)
+}
+
+
 
 .front {
     border-radius: 7px;
     box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
     position: absolute;
-    background-color: #f7f4ef;
+    background-color: var(--bgcolor2); 
     width: 100%;
     height: 100%;
     backface-visibility: hidden
@@ -46,7 +57,7 @@
     border-radius: 7px;
     box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
     position:absolute; 
-    background-color: #f7f4ef; 
+    background-color: var(--bgcolor2); 
     width: 100%;
     height: 100%;
     backface-visibility: hidden;
@@ -63,14 +74,17 @@
 
 .front #name {
     font-size: 1.3rem; 
-
+    color: var(--text0); 
 
 }
 
 figcaption {
+    opacity: 0;
     font-size: 0.75rem;
     color: var(--text2);
     margin-top: 6px;
+    animation: fadein 2s ease forwards;
+    animation-delay: 0.8s; 
 }
 
 #subtitle {
@@ -101,15 +115,36 @@ hr {
     color: var(--text2);
 }
 
-.raw {
-    display: inline-block;
-    font-size: inherit;
-    color: inherit;
-    text-decoration: none;
-    margin: 0;
-    transition: translate 0.4s ease; 
+
+.card.flipped {
+    transform: rotateY(-180deg);
+    animation : none; 
 }
 
-.raw:hover {
-    translate: 5px 0px; 
+@keyframes slidein {
+    from { 
+        opacity: 0; 
+        transform: translateX(-70px) rotate(8deg); 
+    }
+    to { 
+        opacity: 1; 
+        transform: translateX(0) rotate(0deg); 
+    }
 }
+
+@keyframes fadein {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+#card_wrapper {
+    animation: slidein 0.6s ease forwards;
+    animation-delay: 0.3s;
+    opacity: 0;
+}
+
+
