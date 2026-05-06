@@ -36,6 +36,10 @@
     .photo, #card_img {
         filter: invert(1);
     }
+    svg {
+    filter: invert(1);
+}
+
 }
 
 body {
@@ -113,7 +117,6 @@ a {
 
 svg {
     margin-top: 5px;
-
 }
 
 nav a:hover {
@@ -161,9 +164,6 @@ nav a:hover {
     translate: 5px 0px; 
 }
 
-svg {
-    filter: invert(1);
-}
 
 #gallery img {
     opacity: 0; 
