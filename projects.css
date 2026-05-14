@@ -1,0 +1,53 @@
+.name {
+    color: var(--text1); 
+    font-size: 1.5rem;
+    
+}
+
+.subheading {
+    color: var(--text2);
+    font-size: 1.25rem; 
+}
+
+#content {
+    margin-left: 20%; 
+    margin-top: 10%; 
+    overflow: hidden; 
+}
+
+.name {
+    transition: translate 0.4s ease;
+    cursor: pointer;
+}
+
+.name:hover {
+    translate: 5px 0px;
+}
+
+.description {
+    color: var(--text1);
+    max-width: 80%;
+}
+
+#projectgallery {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--gallerygap);
+}
+
+#projectgallery img {
+  width: 70%;
+  object-fit: contain;
+}
+
+#content {
+  animation: fadein 1s ease-in forwards;
+}
+
+.github {
+    filter: brightness(1)
+}
+
+img {
+    margin-bottom: 10%;
+}

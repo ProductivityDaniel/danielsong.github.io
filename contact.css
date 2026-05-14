@@ -8,7 +8,7 @@
     justify-content: center;
     align-items: center;
     height: 100vh;
-    margin-left: -20%; 
+    margin-left: 0%; 
 }
 .scene {
     perspective: 500px; 
@@ -161,16 +161,18 @@ hr {
 }
 
 #paperclip {
+    position: absolute;
+    bottom: 120px;
+    left: 300px;
+    width: 60px; /* fixed size, not percentage */
     rotate: 0deg; 
     opacity: 0; 
-    max-width: 3%;
     animation: fadein 1s ease forwards; 
     animation-delay: 1.5s; 
-    margin-bottom: 10%; 
     animation-delay: 0.5s; 
     filter: opacity(0.6) sepia(0.3);
-    margin-left: -30%;
     transition: transform 0.7s ease;
+    z-index: 10; 
 }
 
 

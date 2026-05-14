@@ -1,0 +1,64 @@
+<!DOCTYPE html> 
+<!--
+Projects page
+Daniel Song
+This is the projects page
+-->
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8"> <!-- just extra rendering stuff-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Spectral&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href = "style.css"> 
+    <link rel="stylesheet" href = "projects.css"> 
+    <title>daniel song · gallery</title>
+    <link rel="icon" class="photo" type="image/png" href="logo.png">
+</head>
+<body>
+    <div id="wrapper">
+        <div id="sidebar"> 
+            <a class="raw" href="https://give.barrierreef.org/"><img data-desc="support barrier reef conservation efforts" class="photo" src="logo.png"></a>
+            <div id="logo">daniel song</div>
+            <nav>
+                <a href="index.html">gallery</a>
+                <a href="about.html">about me</a>
+                <a href="#">projects *</a>
+                <!--<a href="#">music</a>-->
+                <a href="contact.html">contact</a>
+                <a id="ig_logo" href="https://www.instagram.com/snippetsofsong/">
+                    <svg width="24px" height="24px" stroke-width="1.5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" color="#000000"><path d="M12 16C14.2091 16 16 14.2091 16 12C16 9.79086 14.2091 8 12 8C9.79086 8 8 9.79086 8 12C8 14.2091 9.79086 16 12 16Z" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path><path d="M3 16V8C3 5.23858 5.23858 3 8 3H16C18.7614 3 21 5.23858 21 8V16C21 18.7614 18.7614 21 16 21H8C5.23858 21 3 18.7614 3 16Z" stroke="#000000" stroke-width="1.5"></path><path d="M17.5 6.51L17.51 6.49889" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+                </a>
+            </nav>
+            </div>
+            <div id="content"> 
+                <a class="name" href="https://github.com/songd22/3D-Spatial-Mapping-System">Spatial Mapping System <svg class="github" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-github" viewBox="0 0 16 16">
+  <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8"/>
+</svg></a>
+                <div class="subheading">Jan - April 2026 | C · ARM Cortex-M4 · I2C · UART · Python · matplotlib</div>
+                <br>
+                <div class="description" style="text-indent: 50px;">
+                    A low-cost 3D spatial scanner built on an ARM Cortex-M4 microcontroller. 
+                    A Time-of-Flight sensor mounted on a stepper motor captures 128 distance measurements per revolution across multiple scan planes.
+                     Firmware written in C handles sensor communication, motor control, and serial data transmission. 
+                     A Python script receives the data, converts it to 3D coordinates, and renders an interactive point cloud visualization.
+                </div>
+                <br>
+                <div class="subheading"> gallery</div>
+                <br>
+                <section id="projectgallery">
+                    <img style="max-width: 50%;" data-desc="system housing" src="projectstemp/model1.jpg" alt="system housing">
+                    <img data-desc="output scan result" src="projectstemp/outputscan.png" alt="scan result">
+                    <img style="max-width: 50%;" data-desc="input scanned area" src="projectstemp/inputscan.jpg" alt="scanned area">
+                    <img data-desc="circuit schematic" src="projectstemp/circuitSchematic.png" alt="circuit schematic">
+
+                </section>
+            </div>
+            
+
+           <section id="bottom">© daniel song 2026</section>
+
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
